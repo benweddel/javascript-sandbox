@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Play</title>
+</head>
+<body>
+
+  <script>
+    
+  countVowels = function(str){
+    var str = str.toLowerCase();
+    var count = 0;
+    vowels = ['a','e','i','o','u'];
+    end = [',','.',' '];
+    for (i in str) {
+      if (vowels.indexOf(str.charAt(i)) > -1 ) {
+        count++;
+      };
+
+    }
+    // console.log(count);
+  };
+  
+  </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Play</title>
+</head>
+<body>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
+  <script>
+    
+    function isPalindrome(str){
+      str = str.toLowerCase().replace(/\W/g, '');
+      rev = str.split('').reverse().join('');
+      if (str == rev) {
+        console.log(true);
+      } else {
+        console.log(false);
+      }
+    };
+
+  </script>
+</body>
+</html>

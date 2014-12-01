@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Play</title>
+</head>
+<body>
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
+  <script>
+    
+    function titleCase(str) {
+      noCase = ['a','the','to','at','in','with','and','but','or']; //letters to not capitalize
+      newStr =  str.replace(/\w\S*/g, function(txt) {
+        if (noCase.indexOf(txt) > -1) {
+          return txt;
+        } else {
+          return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+        };
+      });
+      newStr = newStr.charAt(0).toUpperCase() + newStr.substr(1);
+      console.log(newStr);
+    };
+
+  </script>
+</body>
+</html>

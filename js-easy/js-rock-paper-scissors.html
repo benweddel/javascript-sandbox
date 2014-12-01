@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Tester</title>
+</head>
+<body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script>
+    
+    var options = ['rock', 'paper', 'scissors'];
+
+    rps = function(user) {
+      user = user.toLowerCase();
+      var comp = options[Math.floor(Math.random() * options.length)];
+      var message = 'You chose '+user+'. I chose '+comp+'. ';
+
+      calcwinner = function(user,comp){ //returns 1 if user wins, 2 if user loses, 0 for tie, -1 for error
+        if (user == comp) {
+          return 0
+        } else if (user == 'rock') {
+          if (comp == 'paper') {
+            return 2
+          } else {
+            return 1
+          }
+        } else if (user == 'paper') {
+          if (comp == 'rock') {
+            return 1
+          } else {
+            return 2
+          }
+        } else if (user == 'scissors') {
+          if (comp == "rock") {
+            return 2
+          } else {
+            return 1
+          }
+        } else {
+          return -1;
+        }
+      };
+
+      var winner = calcwinner(user,comp);
+      getMessage = function(winner){
+        if (winner == 0){
+          message+='It\s a tie!';
+        } else if (winner == 1) {
+          message+='You win!';
+        } else if (winner == 2) {
+          message+='I win!';
+        } else if (winner == -1) {
+          message='Please stop being an idiot';
+        }
+      };
+      getMessage(winner);
+      console.log(message);
+    };
+  </script>
+</body>
+</html>

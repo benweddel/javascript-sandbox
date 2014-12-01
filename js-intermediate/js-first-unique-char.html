@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Play</title>
+</head>
+<body>
+
+  <script>
+    
+    function getFirstUniqueChar(str){
+      for (i in str){
+        if (str.indexOf(str.charAt(i)) == str.lastIndexOf(str.charAt(i)) ) {
+          console.log(str.charAt(i));
+          break;
+        }
+      }
+    };
+
+  </script>
+</body>
+</html>

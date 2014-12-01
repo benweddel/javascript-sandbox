@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Tester</title>
+</head>
+<body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script>
+    
+    countVowels = function(str){
+      var str = str.toLowerCase();
+      var count = 0;
+      for (i in str) {
+        if (str.charAt(i)==('a') ||  //this highlights 2 different ways to match letters
+            str.charAt(i)==('e') ||
+            str.charAt(i).match('i') ||  //this highlights 2 different ways to match letters
+            str.charAt(i).match('o') ||
+            str.charAt(i).match('u')) {
+          count++;
+        }
+      }
+      console.log(count);
+    };
+
+    // This converts the string into an array 
+
+    // countVowels = function(str){
+    //   var lStr = str.toLowerCase();
+    //   var count = 0;
+    //   arr = lStr.split('');
+    //   for (i in arr) {
+    //     if (arr[i].match('a') || arr[i].match('e') || arr[i].match('i') || arr[i].match('o') || arr[i].match('u')) {
+    //       count++;
+    //     }
+    //   }
+    //   console.log(count);
+    // };
+  </script>
+</body>
+</html>

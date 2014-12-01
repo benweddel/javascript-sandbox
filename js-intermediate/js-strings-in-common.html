@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Tester</title>
+</head>
+<body>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
+  <script>
+    
+    function stringsInCommon(arr1,arr2){
+      match = [];
+      for (i in arr1){
+        for (j in arr2){
+          if (arr1[i] == arr2[j]) {
+            match.push(arr1[i]);
+          }
+        }
+      }
+      console.log(match);
+    };
+
+    
+    // This method utilizes indexOf to perform a search in the second array of the nth word in the first. If it finds a match it will return the position in the array and thus be greater than -1 so it will be true.
+    function stringsInC(arr1,arr2){
+      var commonWords = [];
+      for (i=0; i<arr1.length; i++) {
+        var word = arr1[i].toString();
+        if (arr2.indexOf(word) > -1) {
+          commonWords.push(word);
+        };
+      };
+    };
+    
+  </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Play</title>
+</head>
+<body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script>
+    function fibonacci(num){
+      fib=[0,1];
+      if (num == 1) {
+        fib = [0];
+      } else if (num > 1) {
+        for (i=1; i<=(num-2); i++) {
+          fib.push(fib[(i-1)]+fib[i]);
+        }
+      }
+      console.log(fib);
+    };
+  </script>
+</body>
+</html>

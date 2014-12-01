@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Play</title>
+</head>
+<body>
+
+  <script>
+    
+  function isPrime(num){
+    factors = [];
+    for (i=1;i<=num;i++){
+      if (num % i == 0) {
+        factors.push(i);
+      };
+    };
+    if (factors.length <= 2) {
+      console.log(true);
+    } else {
+      console.log(false);
+    };
+  };
+
+  </script>
+</body>
+</html>

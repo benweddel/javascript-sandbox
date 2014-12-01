@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Tester</title>
+</head>
+<body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script>
+
+    //The below function is possibly the most efficient way of calculating the second highest number
+
+    function secondHighestEfficent(arr) {
+      var highest = 0;
+      var secondHighest;
+      for (var i = 1; i < arr.length; i++) {
+        if (arr[i] > arr[highest]) {
+          secondHighest = highest;
+          highest = i;
+        }
+      }
+        return arr[secondHighest];
+    }
+
+
+    secHighestE = function(arr){
+      console.log(arr.sort()[arr.length-2]);
+    };
+
+    secHighest = function(arr){
+      ordered = arr.sort();
+      console.log(ordered[ordered.length-2]);
+    };
+
+    secondHighest = function(nums){
+      highest = Math.max.apply(null,nums);
+      iHighest = nums.indexOf(highest);
+      if (iHighest != -1){
+        nums.splice(iHighest,1);
+      }
+      sHighest = Math.max.apply(null,nums);
+      console.log(sHighest);
+    };
+
+  </script>
+</body>
+</html>

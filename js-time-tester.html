@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Tester</title>
+</head>
+<body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script>
+
+    function secondHighest(arr) {
+      var highest = 0;
+      var secondHighest;
+
+      for (var i = 1; i < arr.length; i++) {
+        if (arr[i] > arr[highest]) {
+          secondHighest = highest;
+          highest = i;
+        }
+      }
+        return arr[secondHighest];
+    }
+
+    function otherSecondHighest(arr) {
+        return arr.sort()[arr.length - 2];
+    }
+
+    function test(arr, func) {
+        console.time('time');
+        func(arr);
+        console.timeEnd('time');
+    }
+
+    function randomArray(num) {
+        var result = [];
+        for (var i = 0; i < num; i++) {
+      result.push(Math.random());
+        }
+        return result;
+    }
+  </script>
+</body>
+</html>

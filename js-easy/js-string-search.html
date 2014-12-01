@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Tester</title>
+</head>
+<body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script>
+    
+    containsString = function(str,arr){
+      var find;
+      for (i = 0; i<arr.length; i++) {
+        if (arr[i].match(str)) {
+          find = true;
+        }
+      }
+      if (find) {
+        console.log(find);
+      } else {
+        console.log(false);
+      }
+    };
+
+    
+    // The below for loop iterates the number of characters in the second value of the array
+    // containsString = function(str,arr){
+    //   var find;
+    //   for (i in arr[1]) {  
+    //     console.log(i);
+    //     }
+    //   };
+  </script>
+</body>
+</html>
