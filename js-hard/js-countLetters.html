@@ -9,9 +9,9 @@
   <script>
     
   countLetters = function(str){
-    str = str.replace(/[^a-zA-Z-]/g, '').toUpperCase();
+    str = str.toUpperCase().replace(/[^A-Z-]/g, ''); //strips the string of non-letter characters
     chars = {};
-    unq = '';
+    unq = ''; //Holds only the unique letters in the string
     var obj = {};
 
     console.log(str);
@@ -36,6 +36,25 @@
     }
     console.log(obj);
   };
+
+  // function countLetters(str){
+  //   var letterCount = {};
+  //   var letters = str.toLowerCase().match(/[a-z]/gi).join('');
+  //   console.log(letters);
+  //   for (var i=0; i<letters.length; i++){
+  //     var currentLetter = letters[i];
+  //     var count = 0;
+  //     if (letters.indexOf(currentLetter)==letters.lastIndexOf(currentLetter)){
+  //       letterCount[currentLetter] = count+=1;
+  //     }
+  //     else {
+  //       var re = new RegExp(currentLetter,'g');
+  //       var multiples=letters.match(re);
+  //       letterCount[currentLetter] = multiples.length;
+  //     }
+  //   }
+  //   console.log(letterCount);
+  // }
 
   </script>
 </body>
