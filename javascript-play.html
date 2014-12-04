@@ -8,22 +8,32 @@
 
   <script>
     
-  isEmail = function(email){
+  
+  function pigLatin(str){
+    // str = str.toLowerCase();
+    arr = str.split(' ');
+    vowels = ['a','e','i','o','u'];
 
-  };
+    console.log(arr);
+  
+    for (i in arr) {
+      var last = arr[i].slice(-1);
 
-  function getUniques(str){
-    str = str.toLowerCase()
-    chars = {};
-    unq = '';
 
-    for (i in str){
-      if (!(str[i] in chars)){
-        chars[str[i]] = 1;
-        unq += str[i];
+
+      if (vowels.indexOf(arr[i].charAt(0)) > -1) {
+        arr[i] = arr[i]+'way';
+      } else {
+        var first = arr[i].charAt(0);
+        //takes the first character out of the word and replaces it with a blank
+        arr[i] = arr[i].replace(arr[i].charAt(0),'');
+        arr[i] = arr[i]+first+'ay'; 
       }
+
     }
-    return unq;
+
+    arr = arr.join(' ');
+    console.log(arr);
   };
 
   </script>
