@@ -18,11 +18,12 @@
     
     //This takes the modified string and pulls in all characters once (string of unique characters)
     for (i in str) {
-      if (!(str[i] in chars)) {
-        chars[str[i]] = 1; //don't understand this line
+      if ((str[i] in chars)) {
+        chars[str[i]] += 1; //don't understand this line
         unq += str[i];
       }
     }
+    console.log(chars);
 
     console.log(unq);
     //This uses the unique characters string to count the occurrence of each character in the modified string
