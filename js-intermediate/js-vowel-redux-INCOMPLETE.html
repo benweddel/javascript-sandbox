@@ -19,7 +19,24 @@
       };
       // To check for y as the last letter of a word, break into array " " then iterate over the last letter (character) and check if it is a y or not. Then adjust if the last character is not a letter at all ex '.' or ','
     }
-    // console.log(count);
+
+    arr = str.split(' ');
+    for (i in arr){
+      var lastchar = arr[i].charAt(arr[i].length - 1);
+      if (lastchar === 'y'){
+        count++;
+      } else if (!lastchar.match(/[a-z]/ig)){
+        var j = 2;
+        while (!lastchar.match(/[a-z]/ig)) {
+          lastchar = arr[i].charAt(arr[i].length - j);
+          j++;
+        }
+        if (lastchar === 'y'){
+          count++;
+        }
+      }
+    }
+    console.log(count);
   };
   
   </script>
